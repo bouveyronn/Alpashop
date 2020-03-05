@@ -1,5 +1,5 @@
 from flask import Flask, render_template, g
-import templates, sqlite3, db
+import templates, db
 from datetime import date
 
 

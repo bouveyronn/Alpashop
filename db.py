@@ -84,7 +84,6 @@ def findAll(id):
 
     return lstLamas
 
-print(str(findAll("*")))
 
 # A décommenter pour reconstruction de la bdd 
 # create_table()
