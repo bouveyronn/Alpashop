@@ -9,12 +9,14 @@ def create_table():
     c.execute('DROP TABLE IF EXISTS animal ;')
     c.execute('DROP TABLE IF EXISTS couleur ;')
     c.execute('DROP TABLE IF EXISTS temperament ;')
+    c.execute('DROP TABLE IF EXISTS lamasticot ;')
 
     c.execute('CREATE TABLE IF NOT EXISTS lama (id INTEGER PRIMARY KEY, puht REAL, fk_temperament INTEGER)')
     c.execute('CREATE TABLE IF NOT EXISTS alpaga (id INTEGER PRIMARY KEY, prixLaine REAL)')
     c.execute('CREATE TABLE IF NOT EXISTS animal (id INTEGER PRIMARY KEY AUTOINCREMENT, nom TEXT, age INTEGER, poids REAL, image TEXT, description TEXT, fk_couleur INTEGER)')
     c.execute('CREATE TABLE IF NOT EXISTS couleur (id INTEGER PRIMARY KEY AUTOINCREMENT, libelle TEXT)')
     c.execute('CREATE TABLE IF NOT EXISTS temperament (id INTEGER PRIMARY KEY AUTOINCREMENT, libelle TEXT)')
+    c.execute('CREATE TABLE IF NOT EXISTS lamasticot (id INTEGER PRIMARY KEY, longueur REAL)')
 
     # c.execute('ALTER TABLE lama(FOREIGN KEY(fk_temperament) REFERENCES temperament(id))')
     # c.execute('ALTER TABLE animal(FOREIGN KEY(fk_couleur) REFERENCES couleur(id))')

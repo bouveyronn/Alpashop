@@ -15,10 +15,11 @@ def home():
 @app.route("/about")
 def about():
     return render_template("about.html")
-    
+
 @app.route("/produits")
 def produits():
-    return render_template("produits/index.html", lamas = db.findLama("*")) 
+    return render_template("produits/index.html", lamas = db.findLama("*"))
+ 
 
 if __name__ == "__main__":
     app.run(debug=True)
